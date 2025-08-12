@@ -10,6 +10,7 @@ class Tateti:
             Jugador(nombre2, "0")
         ]
         self.turno = 0 
+        self.ganador = None
 
 
     def get_jugador_actual(self):
@@ -18,4 +19,12 @@ class Tateti:
     def marcar_casilla(self, fil, col):
         jugador = self.get_jugador_actual()
         self.tablero.poner_la_ficha(fil, col, jugador.get_ficha())
-        self.turno = 1 - self.turnos  
+        self.turno = 1 - self.turno
+
+        if self.tablero.hay_ganador(jugador.get_ficha()):
+            self.ganador = jugador
+            return
+
+    def juego_terminado(self):
+        return self.ganador is not None or self.tablero.esta_lleno()
+ 
