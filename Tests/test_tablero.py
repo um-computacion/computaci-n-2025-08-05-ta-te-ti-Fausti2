@@ -56,4 +56,4 @@ def test_esta_lleno_false_al_inicio_y_true_cuando_se_llena():
         ["X", "0", "X"],
         ["0", "X", "0"],
     ]
-    assert t.esta_lleno() is True
+    assert t.esta_lleno() is True 

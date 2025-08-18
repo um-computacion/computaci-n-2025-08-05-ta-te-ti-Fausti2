@@ -1,5 +1,15 @@
-from clases.Tablero import Tablero, PosOcupadaException
-from clases.Jugador import Jugador 
+try:
+  
+    from clases.Tablero import Tablero, PosOcupadaException
+    from clases.Jugador import Jugador
+except ImportError:
+  
+    import sys
+    import os
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+    from Tablero import Tablero, PosOcupadaException
+    from Jugador import Jugador 
+    
 class Tateti:
     def __init__(self):
         self.tablero = Tablero()
