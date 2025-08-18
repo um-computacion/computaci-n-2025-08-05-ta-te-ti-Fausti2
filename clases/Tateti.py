@@ -1,5 +1,5 @@
-from Tablero import Tablero
-from Jugador import Jugador
+from clases.Tablero import Tablero, PosOcupadaException
+from clases.Jugador import Jugador 
 class Tateti:
     def __init__(self):
         self.tablero = Tablero()

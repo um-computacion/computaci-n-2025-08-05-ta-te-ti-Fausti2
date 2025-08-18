@@ -29,4 +29,4 @@ class Tablero:
         return False
 
     def esta_lleno(self):
-        return all(c != "" for fila in self.contenedor for c in fila)
+        return all(c != "" for fila in self.contenedor for c in fila) 
